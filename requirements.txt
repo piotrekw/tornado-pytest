@@ -1,0 +1,4 @@
+tornado==4.0.1
+pytest==2.6.3
+pytest-xprocess==0.8
+requests==2.4.1
