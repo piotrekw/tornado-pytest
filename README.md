@@ -52,3 +52,15 @@ The fixture above does a few simple things:
 2. Waits until the application starts (the ``check_port`` function).
 3. Kills the application once the fixture is finalized.
 4. Returns ``get_url`` function, which you can use to get a URL for the test server.
+
+Now you can write readable and elegant tests like the one below:
+
+```python
+def test(test_server):
+  response = requests.get(test_server('/'))
+  assert response.status_code == 200
+
+  json = response.json()
+  assert 'status' in json
+  assert json['status'] == 'ok'
+```
