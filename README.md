@@ -45,3 +45,10 @@ def test_server(xprocess, request):
 
   return get_url
 ```
+
+The fixture above does a few simple things:
+
+1. Runs you application in a subprocess.
+2. Waits until the application starts (the ``check_port`` function).
+3. Kills the application once the fixture is finalized.
+4. Returns ``get_url`` function, which you can use to get a URL for the test server.
