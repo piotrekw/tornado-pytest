@@ -64,3 +64,8 @@ def test(test_server):
   assert 'status' in json
   assert json['status'] == 'ok'
 ```
+
+The result
+----------
+
+The approach I'm proposing is not a replacement for unit tests. But it's probably the easiest way to write functional tests for your Tornado-based application. Have fun!
